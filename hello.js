@@ -1,10 +1,11 @@
 import React from 'react';
+// import GlobalFunc from './global.js';
 
 export default React.createClass({
  render: function() {
    return (
      <div>
-         Hello, {this.props.name}!
+         Hoooo, {this.props.name}!
      </div>
    );
  },
