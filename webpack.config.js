@@ -3,9 +3,10 @@ const path = require('path');
 module.exports = {
   entry: ["./app.js"],
   output: {
-    publicPath: '/dist',
-    path: path.resolve(__dirname, 'dist'),
-    filename: "./dist/bundle.js"
+    // In prod deployment, move bundles from `dist` to `staticAssets` folder
+    publicPath: '/staticAssets',
+    path: path.resolve(__dirname, 'dist'), // Save bundles in `dist` folder for development.
+    filename: "bundle.js"
   },
   module: {
    
