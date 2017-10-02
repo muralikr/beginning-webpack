@@ -5,6 +5,7 @@ module.exports = {
   output: {
     // In prod deployment, move bundles from `dist` to `staticAssets` folder
     publicPath: '/staticAssets',
+    pathinfo: true,
     path: path.resolve(__dirname, 'dist'), // Save bundles in `dist` folder for development.
     filename: "bundle.js"
   },
@@ -20,6 +21,8 @@ module.exports = {
         }
       },
       {
+        test: [/\.js$/, /\.es6$/],
+        exclude: /node_modules/,
         loader: 'test-loader'
       }
     ]
